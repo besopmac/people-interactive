@@ -5,6 +5,7 @@ Novo site institucional da People Interactive
 ### Stack
 
 - Task Runner: [Gulp](http://gulpjs.com/)
+- HTML Template Engine: [Pug](https://pugjs.org/api/getting-started.html)
 - CSS Preprocessor: [Stylus](http://stylus-lang.com/)
 
 ### Iniciando o projeto localmente
