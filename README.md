@@ -28,4 +28,4 @@ $ gulp server
 
 ## Versionamento
 
-Para manter uma melhor organização de lançamentos nós seguimos as orientações do [Versionamento Semântico 2.0.0](http://semver.org/).
+Para manter uma melhor organização de lançamentos utilizamos [Versionamento Semântico 2.0.0](http://semver.org/).
