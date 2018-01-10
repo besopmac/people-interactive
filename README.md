@@ -1,6 +1,6 @@
 # People Interactive
 
-Novo site institucional da People Interactive
+Novo site institucional da People Interactive.
 
 ### Stack
 

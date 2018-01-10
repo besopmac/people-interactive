@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/besopmac/people-interactive/issues"
   },
-  "homepage": "https://github.com/besopmac/people-interactive#readme"
+  "homepage": "https://github.com/besopmac/people-interactive#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
