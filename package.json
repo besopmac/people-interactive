@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/besopmac/people-interactive#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-stylus": "^2.7.0"
   }
 }
