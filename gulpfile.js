@@ -1,8 +1,8 @@
-var gulp        = require('gulp')
-var pug         = require('gulp-pug')
-var stylus      = require('gulp-stylus')
-var connect     = require('gulp-connect')
-
+const gulp        = require('gulp')
+const pug         = require('gulp-pug')
+const stylus      = require('gulp-stylus')
+const connect     = require('gulp-connect')
+const imagemin    = require('gulp-imagemin')
 
 gulp.task('stylus', function() {
     gulp.src('./src/assets/styles/*.styl')
@@ -20,8 +20,14 @@ gulp.task('pug', function() {
         .pipe(connect.reload())
 });
 
+gulp.task('imagemin', function() {
+    gulp.src('./src/assets/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./out/assets/img/'))
+})
+
 gulp.task('watch', function() {
-    gulp.watch(['./src/*.pug'], ['pug'])
+    gulp.watch(['./src/*.pug', './src/partials/*.pug', './src/layouts/*.pug'], ['pug'])
     gulp.watch(['./src/assets/styles/*.styl'], ['stylus'])
 })
 
@@ -32,5 +38,5 @@ gulp.task('serve', function() {
     })
 })
 
-gulp.task('build', ['pug', 'stylus'])
+gulp.task('build', ['pug', 'stylus', 'imagemin'])
 gulp.task('server', ['serve','watch'])
