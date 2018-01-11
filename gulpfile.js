@@ -1,7 +1,8 @@
 var gulp        = require('gulp')
 var pug         = require('gulp-pug')
 var stylus      = require('gulp-stylus')
-var browserSync = require('browser-sync').create() 
+var connect     = require('gulp-connect')
+
 
 gulp.task('stylus', function() {
     gulp.src('./src/assets/styles/*.styl')
@@ -9,22 +10,27 @@ gulp.task('stylus', function() {
             compress: true
         }))
         .pipe(gulp.dest('./out/assets/styles/'))
+        .pipe(connect.reload())
 });
 
 gulp.task('pug', function() {
     gulp.src('./src/*.pug')
         .pipe(pug())
         .pipe(gulp.dest('./out'))
+        .pipe(connect.reload())
 });
-
-gulp.task('assets-watch', ['pug', 'stylus'], function(done) {
-    browserSync.reload()
-    done()
-})
 
 gulp.task('watch', function() {
     gulp.watch(['./src/*.pug'], ['pug'])
     gulp.watch(['./src/assets/styles/*.styl'], ['stylus'])
 })
 
+gulp.task('serve', function() {
+    connect.server({
+        root: './out',
+        livereload: true
+    })
+})
+
 gulp.task('build', ['pug', 'stylus'])
+gulp.task('server', ['serve','watch'])
