@@ -24,6 +24,7 @@ gulp.task('imagemin', function() {
     gulp.src('./src/assets/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./out/assets/img/'))
+        .pipe(connect.reload())
 })
 
 gulp.task('watch', function() {
