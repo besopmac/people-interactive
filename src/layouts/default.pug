@@ -1,6 +1,4 @@
-- var title         = "People Interactive"
-- var url           = "http://www.peopleinteractive.com.br"
-- var description   = "Lorem ipsum dolor sit amet."
+include ./../partials/variables.pug
 
 doctype html
 html(lang="pt-br")
@@ -14,9 +12,10 @@ html(lang="pt-br")
         //- Styles
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
-        link(rel="stylesheet" href="assets/styles/style.css")
+        link(rel="stylesheet" href="assets/styles/normalize.css")
+        link(rel="stylesheet" href="assets/styles/main.css")
 
-        title=title
+        title=title + " - " + description 
     body
         include ./../partials/header.pug
 
