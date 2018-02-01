@@ -4,6 +4,7 @@
     max-width 100%
     height auto
 
+/* SECTION: People */
 .header
     background #fff url('../img/bg-default.jpg') no-repeat
     background-size cover
@@ -14,29 +15,42 @@
     clearfix()
     margin auto
     position relative
+    padding 0 rem(70)
     max-width rem(1170)
 
     .disclaimer
-        width 45%
         z-index 200
         position absolute
+        max-width rem(630)
+
+        .title
+            padding 0
+            color #fff
+            line-height 1.1
+            font-weight 900
+            font-size rem(62)
+            margin rem(130) 0 rem(30)
+
+        .content
+            color #fff
+            width rem(400)
+            line-height 1.8
+            font-size rem(18)
+            margin-bottom rem(35)
 
     .ico-menino
-        right 0
+        top rem(34)
+        right rem(-10)
+        position absolute
         z-index 100
-        position absolute
 
-    .logo 
-        right 0
+    > .logo 
         z-index 50
+        right rem(140)
         position absolute
 
 
-.copyright
-    background-color #60645A
 
-
-/* sessoes */
 .box-telecine
     background url('../img/bg-telecine.jpg') no-repeat
     min-height rem(1798)
@@ -78,14 +92,24 @@
     position relative
 
 
+/* SECTION: Copyright */
+.copyright
+    background-color #60645A
+
+
+
 /* buttons */
 .button 
     display inline-block
-    border 1px dashed red
-
+    
     &-default 
         color #fff
-        background-color red
+        font-size rem(12)
+        border-radius rem(50)
+        letter-spacing rem(2)
+        padding rem(20) rem(30)
+        text-transform uppercase
+        background-color #d72828
 
     &-float
         right 0
@@ -93,3 +117,10 @@
 
     &-inicio
         display none
+
+    &-contato
+        padding rem(22) rem(14) rem(16) rem(24)
+        border-radius rem(50) 0 0 rem(50)
+        background-color #d72828
+        top rem(20)
+
