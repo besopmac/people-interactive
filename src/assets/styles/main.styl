@@ -4,19 +4,21 @@
     max-width 100%
     height auto
 
-/* SECTION: People */
 .header
-    background #fff url('../img/bg-default.jpg') no-repeat
+    background #fff url('../img/bg-default.jpg') center bottom no-repeat
     background-size cover
     min-height rem(780)
     position relative
 
 .container
     clearfix()
-    margin auto
+    margin 0 auto
     position relative
     padding 0 rem(70)
     max-width rem(1170)
+    box-sizing border-box
+
+    border-bottom 2px dashed black
 
     .disclaimer
         z-index 200
@@ -26,10 +28,8 @@
         .title
             padding 0
             color #fff
-            line-height 1.1
-            font-weight 900
-            font-size rem(62)
-            margin rem(130) 0 rem(30)
+            font-size rem(55)
+            margin rem(130) 0 rem(35)
 
         .content
             color #fff
@@ -40,13 +40,14 @@
 
     .ico-menino
         top rem(34)
-        right rem(-10)
+        right rem(-90)
         position absolute
         z-index 100
 
+
     > .logo 
         z-index 50
-        right rem(140)
+        right rem(70)
         position absolute
 
     .content-wrapper
@@ -64,20 +65,78 @@
             padding 0
             color #999
             line-height 2
-            font-size rem(17)
-    
-    .map-clientes
-        margin-bottom rem(70)
-
+            font-size rem(17)     
 
 
 .box-telecine
     background url('../img/bg-telecine.jpg') no-repeat
     min-height rem(1798)
 
+    .container
+        padding 0 rem(70)
+        position relative
+        
+        .logo
+            margin rem(0) 0 rem(40)
+
+        .subtitle
+            color #fff
+            font-size rem(60)
+            text-align center
+            text-transform uppercase
+            margin rem(300) 0 rem(120)
+        
+        .ico-nuvem
+            z-index 50
+            right rem(350)
+            position absolute
+        
+        .ico-robo
+            z-index 50
+            top rem(670)
+            right rem(210)
+            position absolute
+
+        .ico-hero
+            z-index 50
+            top rem(960)
+            left rem(-55)
+            position absolute
+
+        .ico-olaf
+            z-index 50
+            top rem(1135)
+            right rem(25)
+            position absolute
+
+        .screens-flex
+            z-index 50
+            position absolute
+            margin-top rem(40)
+            padding 0 rem(70) 0 0
+            
+
+            .ico-bighero
+                position absolute
+
+            
+
+            border 1px solid yellow
+
+
 .box-rededor
+    clearfix()
     background url('../img/bg-rededor.jpg') no-repeat
     min-height rem(1660)
+
+    .container
+        .texto-telecine 
+            color #fff
+            line-height 1.5
+            font-size rem(15)
+            text-align justify
+            margin-bottom rem(100)
+
 
 .box-santander
     background url('../img/bg-santander.jpg') no-repeat
@@ -124,7 +183,7 @@
     
     &-default 
         color #fff
-        font-size rem(12)
+        font-size rem(14)
         border-radius rem(50)
         letter-spacing rem(2)
         padding rem(20) rem(30)
@@ -135,12 +194,12 @@
         right 0
         position absolute
 
-    &-inicio
-        display none
-
+    &-inicio,
     &-contato
         padding rem(22) rem(14) rem(16) rem(24)
         border-radius rem(50) 0 0 rem(50)
         background-color #d72828
         top rem(20)
 
+    &-inicio
+        display none
