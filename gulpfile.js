@@ -3,6 +3,7 @@ const pug         = require('gulp-pug')
 const stylus      = require('gulp-stylus')
 const connect     = require('gulp-connect')
 const imagemin    = require('gulp-imagemin')
+const minify      = require('gulp-minify')
 
 gulp.task('stylus', function() {
     gulp.src('./src/assets/styles/*.styl')
@@ -27,9 +28,24 @@ gulp.task('imagemin', function() {
         .pipe(connect.reload())
 })
 
+gulp.task('compress', function() {
+    gulp.src('./src/assets/script/*.js')
+        .pipe(minify({
+            ext:{
+                src:'-debug.js',
+                min:'.js'
+            },
+            exclude: ['tasks'],
+            ignoreFiles: ['.combo.js', '-min.js']
+        }))
+        .pipe(gulp.dest('./out/assets/script/'))
+        .pipe(connect.reload())
+})
+
 gulp.task('watch', function() {
     gulp.watch(['./src/*.pug', './src/partials/*.pug', './src/layouts/*.pug'], ['pug'])
     gulp.watch(['./src/assets/styles/*.styl'], ['stylus'])
+    gulp.watch(['./src/assets/script/*.js'], ['compress'])
 })
 
 gulp.task('serve', function() {
@@ -39,5 +55,5 @@ gulp.task('serve', function() {
     })
 })
 
-gulp.task('build', ['pug', 'stylus', 'imagemin'])
+gulp.task('build', ['pug', 'stylus', 'imagemin', 'compress'])
 gulp.task('server', ['serve','watch'])

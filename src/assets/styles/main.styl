@@ -338,7 +338,6 @@
     padding rem(200) 0 rem(100)
     background #000407 url('../img/bg-contato.jpg') center top no-repeat
     
-
     .container
         padding 0
         color #fff
@@ -356,7 +355,6 @@
             margin rem(10) 0 rem(30)
             font-size rem(13)
             
-
 .box
     position relative
 
@@ -393,3 +391,40 @@
 
     &-inicio
         display none
+
+    &-small
+        letter-spacing rem(1.5)
+        padding rem(10) rem(20)
+
+
+.form
+    display flex
+    flex-direction column
+
+    .form-row
+        display flex
+        margin-bottom rem(15)
+        box-sizing border-box
+        justify-content space-between
+
+        .form-control
+            flex 1
+            border none
+            color #000
+            box-sizing content-box
+            padding rem(10)
+            line-height 1.5
+            font-size rem(11)
+            font-weight bold
+            border-radius rem(5)
+            letter-spacing rem(2)
+            text-transform uppercase
+            font-family 'Open Sans', sans-serif
+
+            &-small
+                flex 0 0 45%
+
+        .counter
+            font-size rem(11)
+            letter-spacing rem(2)
+            font-family 'Montserrat', sans-serif
