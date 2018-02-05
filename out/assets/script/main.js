@@ -1,1 +1,1 @@
-"use strict";function aloha(){console.log("Hello, World!")}
+$(".button-contato").click(function(){return $("html, body").animate({scrollTop:$($(this).attr("href")).offset().top},800),!1});

@@ -148,7 +148,8 @@
 
 
 .box-santander
-    background #b88860 url('../img/bg-santander.jpg') no-repeat
+    background url('../img/bg-santander.jpg') no-repeat,
+               url('../img/bg-santander-color.jpg') repeat-y
     background-size 100%
 
     .container
@@ -173,8 +174,10 @@
                 margin rem(40) 0
 
 .box-cocacola
-    background #39092D url('../img/bg-cocacola.jpg') no-repeat
+    background url('../img/bg-cocacola.jpg') no-repeat, 
+               url('../img/bg-cocacola-color.jpg') repeat-y
     background-size 100%
+
 
     .container
         .screens
@@ -237,7 +240,8 @@
 
 
 .box-fgv
-    background #538F9C url('../img/bg-fgv.jpg') no-repeat
+    background url('../img/bg-fgv.jpg') no-repeat,        
+               url('../img/bg-fgv-color.jpg') repeat-y
     background-size 100%
     
     .container
@@ -361,7 +365,24 @@
 
 .copyright
     color #fff
-    background-color #60645A
+    padding rem(10) 0 rem(40)
+    background-color #262633
+
+    .wrapper
+        padding 0
+        display flex
+        margin 0 auto
+        justify-content center
+
+        img
+            margin-bottom rem(4)
+
+        .address
+            align-self flex-end
+            font-size rem(12)
+            line-height 1.8
+            list-style none
+            margin 0
 
 
 
