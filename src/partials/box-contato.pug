@@ -3,15 +3,15 @@ section(class='box box-contato')
         h2(class='subtitle') Como podemos te ajudar?
         p(class='content') Venha tomar um café conosco. Envie-nos seu e-mail que entraremos em contato.
         
-        form(class='form')
+        form(class='form' method='post' action='#' id='newsletterform' data-mailchimp='false')
             
             div(class='form-row')
-                input(class='form-control form-control-small' type='text' placeholder='seu nome')
-                input(class='form-control form-control-small' type='email' placeholder='seu email')
+                input(class='form-control form-control-small' id='newsletter-name' name='newsletter-name' type='text' placeholder='seu nome')
+                input(class='form-control form-control-small' id='newsletter-email' name='newsletter-email' type='email' placeholder='seu email')
 
             div(class='form-row')
-                textarea(class='form-control' name='mensagem' rows='8' placeholder='mensagem')
+                textarea(class='form-control' id='newsletter-mensagem' name='mensagem' rows='8' placeholder='mensagem')
 
             div(class='form-row')
                 small(class='counter') 500
-                button(class='button button-default button-small' type='submit') Enviar
+                a(href='#' class='button button-default button-small' id='button-newsletter' title='Enviar') Enviar
