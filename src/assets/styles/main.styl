@@ -266,7 +266,8 @@
 
 
 .box-hsbc
-    background #0F2950 url('../img/bg-hsbc.jpg') no-repeat
+    background url('../img/bg-hsbc.jpg') no-repeat,
+               url('../img/bg-hsbc-color.jpg') repeat-y
     background-size 100%
 
     .container
@@ -402,17 +403,19 @@
 
     &-float
         right 0
-        position absolute
-
-    &-inicio,
-    &-contato
         padding rem(22) rem(14) rem(16) rem(24)
         border-radius rem(50) 0 0 rem(50)
-        background-color #d72828
+
+    &-contato
         top rem(20)
+        z-index 100
+        position fixed
+        background-color #d72828
 
     &-inicio
-        display none
+        top rem(130)
+        position absolute
+        background-color #fff;
 
     &-small
         letter-spacing rem(1.5)
